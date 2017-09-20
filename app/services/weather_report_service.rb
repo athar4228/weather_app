@@ -21,7 +21,6 @@ class WeatherReportService
   end
 
   def make_request
-    byebug
     begin
       uri                 = URI.parse(base_url)
       uri.query           = URI.encode_www_form(query_params)

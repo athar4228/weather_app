@@ -1,6 +1,7 @@
 <div class='clearfix'></div>
 <% flash.each do |type, messages| %>
-  <div class='alert'>
+  <div class='alert alert-<%= alert_class(type) %> alert-dismissible fade in'>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <% if messages.present? %>
       <li><%= messages %></li>
     <% end %>

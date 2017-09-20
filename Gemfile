@@ -61,3 +61,6 @@ gem 'httparty'
 
 # Use Figaro for maintaining Environment Variables
 gem  'figaro'
+
+#Styling
+gem 'bootstrap-sass'

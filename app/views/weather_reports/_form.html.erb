@@ -1,4 +1,4 @@
-<div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <%= form_for @weather_report, method: :post do |f| %>
 
     <div id="error_explanation">
@@ -9,18 +9,24 @@
       </ul>
     </div>
 
-    <div class='field'>
-      <%= f.label :country_code, 'Country' %>
-      <%= f.select :country_code, options_for_select(render_countries(countries), f.object.country_code), { prompt: "Please Select" }, required: true %>
+    <div class='form-group'>
+      <div class="row">
+        <%= f.label :country_code, 'Country' %>
+        <%= f.select :country_code, options_for_select(render_countries(countries), f.object.country_code), { prompt: "Please Select" }, required: true, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class='field'>
-      <%= f.label :city, 'City' %>
-      <%= f.text_field :city, required: true %>
+    <div class='form-group'>
+      <div class="row">
+        <%= f.label :city, 'City' %>
+        <%= f.text_field :city, required: true, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class='field'>
-      <%= f.submit 'Generate Weather Report' %>
+    <div class='form-group'>
+      <div class="row">
+        <%= f.submit 'Generate Weather Report', class: 'btn btn-primary pull-right' %>
+      </div>
     </div>
 
   <% end %>
