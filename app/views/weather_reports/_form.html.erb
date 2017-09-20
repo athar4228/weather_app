@@ -20,8 +20,12 @@
     </div>
 
     <div class='field'>
-      <%= f.submit %>
+      <%= f.submit 'Generate Weather Report' %>
     </div>
 
   <% end %>
 </div>
+
+<% if @response.present? %>
+  <%= render 'show', response: @response %>
+<% end %>

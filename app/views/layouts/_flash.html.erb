@@ -1,0 +1,8 @@
+<div class='clearfix'></div>
+<% flash.each do |type, messages| %>
+  <div class='alert'>
+    <% if messages.present? %>
+      <li><%= messages %></li>
+    <% end %>
+  </div>
+<% end %>

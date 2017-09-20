@@ -54,3 +54,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use countries gem to list down the Countries
 gem 'countries'
+
+
+# Use HTTParty to make API request to openweathermap.org
+gem 'httparty'
+
+# Use Figaro for maintaining Environment Variables
+gem  'figaro'

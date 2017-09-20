@@ -1,0 +1,21 @@
+<h2>City</h2>
+
+<%= response['name'] %>
+
+<table >
+  <th>Name</th>
+  <th>Description</th>
+  <th>Temperature</th>
+  <th>Pressure</th>
+  <th>Wind</th>
+  <tbody>
+    <tr>
+      <% weather = response['weather'].first %>
+      <td><%= weather["name"] %></td>
+      <td><%= weather["description"] %></td>
+      <td><%= response['main']['temp'] %></td>
+      <td><%= response['main']['pressure'] %></td>
+      <td><% response['wind']['speed'] %></td>
+    </tr>
+  </tbody>
+</table>
