@@ -1,0 +1,27 @@
+<div>
+  <%= form_for @weather_report, method: :post do |f| %>
+
+    <div id="error_explanation">
+      <ul>
+        <% f.object.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class='field'>
+      <%= f.label :country_code, 'Country' %>
+      <%= f.select :country_code, options_for_select(render_countries(countries), f.object.country_code), { prompt: "Please Select" }, required: true %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :city, 'City' %>
+      <%= f.text_field :city, required: true %>
+    </div>
+
+    <div class='field'>
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+</div>
